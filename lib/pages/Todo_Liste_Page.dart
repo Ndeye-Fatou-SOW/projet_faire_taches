@@ -14,7 +14,7 @@ class TodoListPage extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) {
         final provider = TodoListProvider();
-        provider.loadTodos(accountId); // 🔥 charge dès l’ouverture
+        provider.loadTodos(accountId); 
         return provider;
       },
       child: Consumer<TodoListProvider>(
@@ -38,7 +38,7 @@ class TodoListPage extends StatelessWidget {
             ),
             body: Column(
               children: [
-                // 🔎 Search
+                
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                   child: TextField(
@@ -56,7 +56,7 @@ class TodoListPage extends StatelessWidget {
                     onChanged: provider.searchTodos,
                   ),
                 ),
-                // 📋 Liste des tâches
+                // taches
                 Expanded(
                   child: provider.isLoading
                       ? const Center(child: CircularProgressIndicator())
